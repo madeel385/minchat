@@ -1,1 +1,1 @@
-web: python minchat.py
+web: gunicorn minchat:app
