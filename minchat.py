@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import os
 from flask import Flask ,request
 
 app = Flask(__name__)
@@ -7,8 +7,12 @@ app = Flask(__name__)
 @app.route("/")
 def HandleVerification():
 
+    if (request.args['hub.mode']=="subscribe"  ):
+        if(request.args['hub.challenge']):
+            if(request.args['hub.verify_token']==os.environ["hook_verification"]):
+                return request.args['hub.challenge']
 
-    return request.args['hub.challenge']
+    return "not allowed!!"
 
 
 
