@@ -5,21 +5,12 @@ from flask import Flask ,request
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-    return "request method %s" % request.method
+def HandleVerification():
 
 
-@app.route("/adi",methods=['POST'])
-def adi():
-    return "request method "
+    return request.args['hub.challenge']
 
-@app.route("/user/<username>")
-def user(username):
-    return '<h2>hello %s</h2>' % username
 
-@app.route("/post/<int:postid>")
-def post_id(postid):
-    return '<h2>your post id is  %s</h2>' % postid
 
 
 
