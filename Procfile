@@ -1,1 +1,1 @@
-web: python minchat.py
+python minchat.py
