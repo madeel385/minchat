@@ -7,9 +7,9 @@ app = Flask(__name__)
 @app.route("/")
 def HandleVerification():
 
-    if (request.args['hub.mode']=="subscribe"  ):
-        if(request.args['hub.challenge']):
-            if(request.args['hub.verify_token']==os.environ["hook_verification"]):
+    if (request.args.get('hub.mode')=="subscribe"  ):
+        if(request.args.get('hub.challenge')):
+            if(request.args.get('hub.verify_token')==os.environ["hook_verification"]):
                 return request.args['hub.challenge']
             else :
                 "not allowed!!"
