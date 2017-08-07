@@ -17,8 +17,8 @@
       <file leaf-file-name="minchat.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/minchat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="67">
+              <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -219,8 +219,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minchat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="67">
+          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
           <folding />
         </state>
       </provider>
