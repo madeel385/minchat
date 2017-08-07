@@ -1,1 +1,1 @@
-gunicorn minchat:app
+web: gunicorn minchat:app
