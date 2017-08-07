@@ -11,8 +11,13 @@ def HandleVerification():
         if(request.args['hub.challenge']):
             if(request.args['hub.verify_token']==os.environ["hook_verification"]):
                 return request.args['hub.challenge']
+            else :
+                "not allowed!!"
+        else:
+            "not allowed!!"
 
-    return "not allowed!!"
+    else:
+        return "not allowed!!"
 
 
 
