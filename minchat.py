@@ -46,13 +46,19 @@ def handle_incoming_messages():
 
 
 def replyfb (user_id,msg):
-    data = {
-        "recipient": {"id": user_id},
-        "message": {"text": msg}
-    }
-    params = json.dump({
-        "access_token": os.environ["page_verification"]
+   
+    data = json.dumps({
+        "recipient": {
+            "id": user_id
+        },
+        "message": {
+            "text": msg
+        }
     })
+
+    params = {
+        "access_token": os.environ["page_verification"]
+    }
     headers = {
         "Content-Type": "application/json"
     }
