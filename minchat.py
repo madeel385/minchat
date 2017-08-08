@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import sys
 from flask import Flask ,request
 
 app = Flask(__name__)
@@ -19,11 +20,54 @@ def HandleVerification():
     else:
         return "not allowed!!"
 
-
-@app.route('/', methods=['POST'])
+'''@app.route('/', methods=['POST'])
 def handle_incoming_messages():
     data = request.json
-    return  data
+    sender = data['entry'][0]['messaging'][0]['sender']['id']
+    message = data['entry'][0]['messaging'][0]['message']['text']
+    reply(sender, message[::-1])
+ 
+    return "ok"'''
+
+@app.route("/", methods=['POST'])
+def handle_incoming_messages():
+    fbdata = request.json
+    log(fbdata)
+    if fbdata["object"]=="page" :
+        for entry in fbdata['entry'] :
+            for fbmsg in entry["messaging"]:
+                if fbmsg.get("message"):
+                    sender_id = fbmsg["sender"]["id"]
+                    recipient = fbmsg["recipient"]["id"]
+                    messag_txt = fbmsg["message"]["text"]
+
+
+    return  "ok"
+
+def log(text):
+    print str(text)
+    sys.stdout.flush()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
