@@ -38,7 +38,7 @@ def handle_incoming_messages():
     return  "ok"
 
 def log(text):
-    print str(text)
+    print text
     sys.stdout.flush()
 
 
