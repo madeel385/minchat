@@ -20,7 +20,7 @@ def HandleVerification():
         return "not allowed!!"
 
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
 def handle_incoming_messages():
     data = request.json
     return  data
