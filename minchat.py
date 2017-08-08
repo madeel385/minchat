@@ -25,7 +25,7 @@ def HandleVerification():
 @app.route("/", methods=['POST'])
 def handle_incoming_messages():
     fbdata = request.json
-    log(fbdata)
+   
     if fbdata["object"]=="page" :
         for entry in fbdata['entry'] :
             for fbmsg in entry["messaging"]:
@@ -37,9 +37,6 @@ def handle_incoming_messages():
 
     return  "ok"
 
-def log(text):
-    print text
-    sys.stdout.flush()
 
 
 
